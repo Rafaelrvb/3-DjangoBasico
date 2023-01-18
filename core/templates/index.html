@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Django 1 - Index</title>
+</head>
+<body>
+  <h1>Index</h1>
+  <h2>{{curso}}</h2>
+  <p>{{nome}}</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Produto</th>
+        <th>Preço</th>
+        <th>Estoque</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- FOR loop creating one table row for each iteration-->
+      {% for produto in produtos %}
+      <tr>
+        <td><a href="{% url 'produto' produto.id %}">{{produto.nome}}</a></td>
+        <td>{{produto.preco}}</td>
+        <td>{{produto.estoque}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
