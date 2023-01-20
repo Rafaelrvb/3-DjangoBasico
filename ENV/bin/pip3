@@ -1,4 +1,4 @@
-#!/home/rafaelrvb/cursos/DjangoEssencial/3-DjangoBasico/ENV/bin/python3
+#!/home/rafaelrvb/cursos/DjangoEssencial/3-DjangoBasico/ENV/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
